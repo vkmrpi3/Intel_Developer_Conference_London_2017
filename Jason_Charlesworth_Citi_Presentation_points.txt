@@ -1,0 +1,15 @@
+
+Use debug macros thoroughly for testing of heavily optimized code.
+
+It is advisable to keep all AVX2 code at one place instead of distributing 
+the AVX2 code all over the code. This is because the performance penalty to 
+move in and out of AVX2 is very high.
+
+Simple example of how the size of the memory block at the end of the block 
+causing too many cache misses and moving it to the begining improved cache performance 
+
+Use of RESTRICT pointers in one case resulted in 4x improvement in performance.
+
+Use of FAT binaries to handle multiple platforms like SSE,AVX, AVX2 and AVX512.
+
+Microsoft has discontinued support for OPEN MP 4.
